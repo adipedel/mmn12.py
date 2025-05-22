@@ -86,7 +86,7 @@ def compression(s):
     num = 1
     while i < len(s):
         if  s[i] == s[i-1]:
-            while s[i] == s[i-1]:
+            while i < len(s) and s[i] == s[i - 1]:
                 num += 1
                 i += 1
             s = s[0:i-num+1]+str(num)+s[i:]
@@ -94,7 +94,6 @@ def compression(s):
             i-=1
         i+=1
     return s
-
 
 def sum_square(num):
     """
